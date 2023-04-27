@@ -1,0 +1,87 @@
+<!doctype html><html lang=ja>
+<head>
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<title>
+単純なHTMLファイルをGitHubで管理してNetlifyで配信する&nbsp;-&nbsp;kawaken.dev
+</title>
+<meta name=description content="kawakenの主に技術的なブログ、写真やガジェットなど">
+<meta name=author content="kawaken">
+<meta name=format-detection content="email=no,telephone=no,address=no">
+<link rel=stylesheet href=/css/styles.css>
+<link rel=apple-touch-icon href=/apple-touch-icon.png>
+<link rel=icon type=image/png href=/favicon.png>
+<meta property="og:title" content="単純なHTMLファイルをGitHubで管理してNetlifyで配信する">
+<meta property="og:description" content="静的サイト（kawaken.dev）を公開するにあたってジェネレーターを利用せず単純なHTMLファイルを利用したかったので、その方法を残したメモです。 GitHubのリポジトリにHTMLをコミット・プッ">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://kawaken.dev/posts/20200801_deliver-html-files-with-netlify/"><meta property="article:section" content="posts">
+<meta property="article:published_time" content="2020-08-01T21:00:00+09:00">
+<meta property="article:modified_time" content="2023-02-27T01:29:57+09:00">
+<meta name=twitter:card content="summary_large_image">
+<meta name=twitter:image content="https://kawaken.dev/ogp/posts/2020/20200801_deliver-html-files-with-netlify.png">
+<meta name=twitter:title content="単純なHTMLファイルをGitHubで管理してNetlifyで配信する">
+<meta name=twitter:description content="静的サイト（kawaken.dev）を公開するにあたってジェネレーターを利用せず単純なHTMLファイルを利用したかったので、その方法を残したメモです。 GitHubのリポジトリにHTMLをコミット・プッ">
+<meta name=twitter:site content="@kawaken">
+<meta name=twitter:creator content="@kawaken">
+<meta name=generator content="Hugo 0.89.4">
+<link rel=prerender href=/posts/20200729_i-moved-my-blog/ as=document>
+<link rel=prerender href=/posts/20200811_install-basic-gnu-commands/ as=document>
+</head>
+<body><header class=page-header>
+<nav>
+<a href=/>kawaken.dev</a>
+</nav>
+</header>
+<main>
+<article>
+<header>
+<h1>単純なHTMLファイルをGitHubで管理してNetlifyで配信する</h1>
+<p>
+<small>published: 2020-08-01</small>
+</p>
+</header>
+<p>
+静的サイト（kawaken.dev）を公開するにあたってジェネレーターを利用せず単純なHTMLファイルを利用したかったので、その方法を残したメモです。
+</p>
+<h2>GitHubのリポジトリにHTMLをコミット・プッシュしておく</h2>
+<p>
+ジェネレーターなどを使わない場合はリポジトリのルートがサイトルートとなるので、表示させたい階層のままリポジトリにファイルを置いてコミットしておきます。
+</p>
+<p>サイトルートはもしかしたら設定できるかもしれません。</p>
+<h2>Netlify側で連携させる</h2>
+<p>以下の手順で設定しました。</p>
+<ol>
+<li><code>New site from Git</code></li>
+<li>GitHubを選択</li>
+<li>初回は認可の設定をする</li>
+<li>公開したいリポジトリを選択する</li>
+<li>
+デプロイの設定をする
+<ul>
+<li>
+OwnerとBranchを選択する（デフォルトで個人のチーム、masterになっている）
+</li>
+<li><code>Basic build</code>は未設定で良い</li>
+</ul>
+</li>
+</ol>
+<p>
+ここまで設定するとすぐにデプロイが実行されサイトが生成されます。GitHubのリポジトリの方にはNetlifyのIntegrationが追加されています。以降GitHubにプッシュすると自動でNetlify側も更新されるようになります。
+</p>
+<p>
+デプロイされたサイトには<code>https://自動発行のサブドメイン.netlify.app/</code>のURLが発行されています。DNSの設定が不要であればこれでOKです。
+</p>
+</article>
+<nav>
+<p>Prev: <a href=/posts/20200729_i-moved-my-blog/>ブログを引っ越ししました</a></p>
+<p>Next: <a href=/posts/20200811_install-basic-gnu-commands/>MacへのGNUのコマンドのインストール</a></p>
+</nav>
+</main><footer class=page-footer>
+<p class=copyright>
+&copy; 2020 Kentaro Kawano&nbsp;|&nbsp;<span>Designed by&nbsp;</span><a href=https://github.com/kawaken/planet>planet</a>
+</p>
+<p class=social>
+<a href=/>kawaken.dev</a>&nbsp;|&nbsp;<a href=https://github.com/kawaken>GitHub</a>&nbsp;|&nbsp;<a href=https://twitter.com/@kawaken>Twitter</a>&nbsp;|&nbsp;<a href=https://www.instagram.com/kawaken/>Instagram</a></p>
+</footer>
+<!-- Cloudflare Pages Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "4ab9fb724aab422ab6a1b17607a5e52f"}'></script><!-- Cloudflare Pages Analytics --></body>
+</html>
