@@ -1,6 +1,6 @@
-<html>
-<h1 class="cps-post-title entry-title" itemprop="headline">自己紹介</h1>
-							</header>
+<!DOCTYPE html>
+<html lang="ja">
+ <head>
   </head>
   <body>
     <h1>太郎です</h1>
