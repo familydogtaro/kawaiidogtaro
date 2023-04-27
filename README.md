@@ -1,4 +1,3 @@
-# taro
 <html>
 <h1 class="cps-post-title entry-title" itemprop="headline">自己紹介</h1>
 							</header>
